@@ -5,6 +5,7 @@ export class CalculadoraModelo {
     operacion:string;
     operaciones:any[];
     constructor(txta:string, txtb:string, operacion:string) {
+        console.log('------- constructor de CalculadoraModelo -------');
         this.resultado = undefined;
         this.operaciones = [
             { valor: '+', texto: 'sumar' }, { valor: '-', texto: 'restar' },
