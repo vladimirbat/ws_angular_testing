@@ -8,7 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { MantenimientoComponent } from "./mantenimiento.component";
 
-describe("El componente calculadora",()=>{
+describe("El componente Mantenimiento (http)",()=>{
     beforeEach(()=>{
         // El método TestBed.configureTestingModule permite importar
         // todos los elementos que vamos a emplear en esta prueba.
@@ -25,8 +25,12 @@ describe("El componente calculadora",()=>{
             ]
         }).compileComponents();
     });
+    // Nota: Tener preubas unitarias que dependen de peticiones http 
+    // reales es un antipatrón, simplemente se ha puesto para
+    // introducir el asincronismo en las pruebas y la 
+    // posibilidad del uso de DoneFn.
     //---------- Mediante DoneFn indicamos que la prueba no termine hasta que se ejecute "done()".
-    // it("se instancia correctamente",(done: DoneFn)=>{
+    // it("recibe e imprime las personas",(done: DoneFn)=>{
     //     const fixture:ComponentFixture<MantenimientoComponent> = TestBed.createComponent(MantenimientoComponent);
     //     const mantenimientoComponent:MantenimientoComponent = fixture.debugElement.componentInstance;
     //     fixture.detectChanges();//continua en el flujo, llega a ngOnInit (petición que tarda un rato)
