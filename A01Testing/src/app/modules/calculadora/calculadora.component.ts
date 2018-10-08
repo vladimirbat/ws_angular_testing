@@ -11,7 +11,7 @@ export class CalculadoraComponent implements OnInit {
     calc: CalculadoraModelo;
     isNaN = isNaN;
     ngOnInit(): void {
-        this.calc = new CalculadoraModelo("","","");
+        this.calc = new CalculadoraModelo("","","+");
     }
     ngOnChanges(changes: SimpleChanges): void {
         console.log('------------- CAMBIO ---------');

@@ -1,7 +1,7 @@
 <h1>Calculadora</h1>
 <p>
-    a:<input type="text" [(ngModel)]="calc.txta" (keyup)="calc.resultado=undefined"/><br/>
-    b:<input type="text" [(ngModel)]="calc.txtb" (keyup)="calc.resultado=undefined"/>
+    a:<input type="text" [(ngModel)]="calc.txta" (keyup)="calc.resultado=undefined" class="inputCalc"/><br/>
+    b:<input type="text" [(ngModel)]="calc.txtb" (keyup)="calc.resultado=undefined" class="inputCalc2"/>
     <select [(ngModel)]="calc.operacion" (change)="calc.resultado=undefined">
         <option *ngFor="let op of calc.operaciones" [value]="op.valor" >
             {{op.texto}}

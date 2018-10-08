@@ -13,7 +13,7 @@ import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 @Injectable() // Declara esta clase como servicio
 export class PersonasService{
-    private _personas: Persona[] = MATRIZ_PERSONAS;
+    private _personas: Persona[];// = MATRIZ_PERSONAS;
     constructor(private http: HttpClient) {
     }
 
@@ -45,7 +45,6 @@ export class PersonasService{
               `y mensaje: ${error.error}`);
           }
           // Mensaje par el usuario retornado en un observable.
-          return new ErrorObservable(
-            'Tenemos problemas de comunicación con el servidor');
+          return new ErrorObservable('Tenemos problemas de comunicación con el servidor');
       };
 }
